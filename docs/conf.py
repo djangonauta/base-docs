@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'docs-base'
-copyright = '2024, Igor Carvalho'
+copyright = '2025, Igor Carvalho'
 author = 'Igor Carvalho'
 release = '0.1.0'
 
@@ -28,3 +28,4 @@ language = 'pt_BR'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_js_files = ['js/main.js']

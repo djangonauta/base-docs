@@ -1,18 +1,19 @@
-[tool.poetry]
+[project]
 name = "base-docs"
 version = "0.1.0"
 description = ""
-authors = ["Igor Carvalho <igor.carvalho@tjpa.jus.br>"]
+authors = [
+    {name = "Igor Carvalho",email = "igbrch@gmail.com"}
+]
 readme = "README.md"
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "^3.12"
-invoke = "^2.2.0"
-sphinx = "^7"
-sphinx-autobuild = "^2024.10.3"
-sphinx-rtd-theme = "^2.0.0"
+requires-python = ">=3.13"
+dependencies = [
+    "invoke (>=2.2.0,<3.0.0)",
+    "sphinx (>=8.2.3,<9.0.0)",
+    "sphinx-autobuild (>=2024.10.3,<2025.0.0)",
+    "sphinx-rtd-theme (>=3.0.2,<4.0.0)"
+]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
