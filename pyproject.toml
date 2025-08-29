@@ -1,9 +1,9 @@
 [project]
 name = "base-docs"
 version = "0.3.2"
-description = ""
+description = "Projeto base para documentações"
 authors = [
-    {name = "Igor Carvalho",email = "igbrch@gmail.com"}
+    {name = "Igor Carvalho", email = "igbrch@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
@@ -23,6 +23,7 @@ optional = true
 black = "^25.1.0"
 commitizen = "^4.8.3"
 flake8 = "^7.3.0"
+isort = "^6.0.1"
 poethepoet = "^0.37.0"
 
 [tool.black]
