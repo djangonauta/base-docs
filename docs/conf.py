@@ -4,7 +4,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-informationnnnnnnnnnnnnnnnnn
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import tomllib
 
 project = "docs-base"
@@ -31,5 +31,5 @@ language = "pt_BR"
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
-html_css_files = ["css/main.css"]
-html_js_files = ["js/main.js"]
+html_css_files = ["libs/fancybox/css/fancybox.css", "css/main.css"]
+html_js_files = ["libs/fancybox/js/fancybox.umd.js", "js/main.js"]

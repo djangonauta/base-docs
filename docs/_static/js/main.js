@@ -3,6 +3,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     configurarAncoras();
+    Fancybox.bind('.data-fb', {});
   });
 
   function configurarAncoras() {

@@ -44,7 +44,6 @@ Abra o arquivo `conf.py` e modifique as seguintes linhas de acordo com a necessi
 project = 'docs-base'
 copyright = '2025, Igor Carvalho'
 author = 'Igor Carvalho'
-release = '0.1.0'
 ```
 
 ### pyproject.toml
@@ -56,7 +55,7 @@ name = "base-docs"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Igor Carvalho",email = "igbrch@gmail.com"}
+    {name = "Igor Carvalho", email = "igbrch@gmail.com"}
 ]
 ```
 
@@ -67,11 +66,11 @@ Os passos para instalação estão disponíveis no site oficial do [Poetry][poet
 ## Instalar as dependências do projeto
 
 Após clonar o projeto com [Git][git] e com [Python][python] e [Poetry][poetry] instalados, acesse para o
-diretório em que o projeto foi clonado e instale as dependências com comando `poetry update`:
+diretório em que o projeto foi clonado e instale as dependências com comando `poetry install --with dev`:
 
 ```bash
 [igor@oak][/home/igor/projects/base-docs][⑆ main]
-└─▶ poetry update
+└─▶ poetry install --with dev
 ```
 
 Um ambiente virtual será criado automaticamente e as dependências serão instaladas. Se o projeto não foi
@@ -80,36 +79,24 @@ documentação será `docs-base`.
 
 ## Executar a documentação
 
-O comando `poetry env activate` ativa o ambiente virtual do projeto. Atenção para as crases (`) ao redor do
-comando:
+O comando `poetry env activate | source` ativa o ambiente virtual do projeto.
 
 ```bash
-[igor@oak][/home/igor/projects/base-docs][⑆ main]
-└─▶ `poetry env activate`
+base-docs on  main [!?] is 📦 v0.3.2 via 🐍 v3.13.7
+❯ poetry env activate | source
 
-(base-docs-py3.13) [igor@oak][/home/igor/projects/base-docs][⑆ main]
-└─▶ 
+base-docs on  main [!?] is 📦 v0.3.2 via 🐍 v3.13.7 (base-docs-py3.13)
+❯
 ```
 
-Também é possível utilizar o comando no formato `$(poetry env activate)` caso o formato anterior não funcione.
+Com o ambiente virtual ativado, execute `poe docs` para limpar o diretório `build` construir a documentação
+usando `sphinx-autobuild`.
 
-Com o ambiente virtual ativado, execute o `pyinvoke` com comando `inv` que por sua vez, de forma transparente,
-executa o `sphinx-autobuild`:
+`poe` não aparenta funcionar no Windows. Nesse caso use os comandos a seguir:
 
 ```bash
-(base-docs-py3.13) [igor@oak][/home/igor/projects/base-docs][⑆ main]
-└─▶ inv
-```
-
-A documentação deve estar disponível no endereço [http://localhost:9000](http://localhost:9000). O `host` e a
-porta podem ser alterados modificando o arquivo `tasks.py`:
-
-```python
-@invoke.task(default=True)
-def run(ctx, source='docs', output='build/html', host='0.0.0.0', port='9000'):
-    ctx.run('make clean')
-    ctx.run('make html')
-    ctx.run(f'sphinx-autobuild {source} {output} --host {host} --port {port}', pty=True, echo=True)
+make clean
+sphinx-autobuild ./docs ./build --host 0.0.0.0 --port 9000
 ```
 
 ## Reiniciar o repositório
@@ -125,7 +112,7 @@ rm -rf .git
 # Inicia novo repositório
 git init
 git add .
-git commit -m "Initial commit"
+git commit -m "Initial commit" # ou cz commit
 
 # Conecta com seu novo repositório remoto (primeiro crie o novo repositório no github ou gitlab).
 git remote add origin <seu-novo-repositorio>
