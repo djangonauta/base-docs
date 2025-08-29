@@ -1,3 +1,9 @@
+## 0.3.0 (2025-08-29)
+
+### Feat
+
+- Adicionado .readthedocs.yaml
+
 ## 0.2.1 (2025-08-29)
 
 ### Fix
