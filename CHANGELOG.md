@@ -1,3 +1,9 @@
+## 0.4.0 (2025-08-29)
+
+### Feat
+
+- Projeto atualizado com fancybox
+
 ## 0.3.2 (2025-08-29)
 
 ### Fix
