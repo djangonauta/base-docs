@@ -5,11 +5,14 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-informationnnnnnnnnnnnnnnnnn
+import tomllib
 
 project = "docs-base"
 copyright = "2025, Igor Carvalho"
 author = "Igor Carvalho"
-release = "0.1.0"
+with open("../pyproject.toml", "rb") as f:
+    config = tomllib.load(f)
+    release = config["project"]["version"]
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
