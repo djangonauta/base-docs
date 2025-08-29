@@ -4,28 +4,29 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-informationnnnnnnnnnnnnnnnnn
 
-project = 'docs-base'
-copyright = '2025, Igor Carvalho'
-author = 'Igor Carvalho'
-release = '0.1.0'
+project = "docs-base"
+copyright = "2025, Igor Carvalho"
+author = "Igor Carvalho"
+release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx_rtd_theme',
+    "sphinx_rtd_theme",
 ]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
 
-language = 'pt_BR'
+language = "pt_BR"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_static']
-html_js_files = ['js/main.js']
+html_theme = "sphinx_rtd_theme"
+html_static_path = ["_static"]
+html_css_files = ["css/main.css"]
+html_js_files = ["js/main.js"]

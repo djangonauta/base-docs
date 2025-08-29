@@ -6,13 +6,42 @@ authors = [
     {name = "Igor Carvalho",email = "igbrch@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<3.14"
 dependencies = [
-    "invoke (>=2.2.0,<3.0.0)",
+    "commitizen (>=4.8.3,<5.0.0)",
+    "poethepoet (>=0.37.0,<0.38.0)",
     "sphinx (>=8.2.3,<9.0.0)",
-    "sphinx-autobuild (>=2024.10.3,<2025.0.0)",
-    "sphinx-rtd-theme (>=3.0.2,<4.0.0)"
+    "sphinx-autobuild (>=2025.8.25,<2026.0.0)",
+    "sphinx-rtd-theme (>=3.0.2,<4.0.0)",
+    "black (>=25.1.0,<26.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)"
 ]
+
+[tool.poetry]
+package-mode = false
+
+[tool.black]
+line-length = 100
+target-version = ['py313']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.poe.tasks]
+clean = "make clean"
+build = "sphinx-autobuild ./docs ./build --host 0.0.0.0 --port 9000"
+docs = ["clean", "build"]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
