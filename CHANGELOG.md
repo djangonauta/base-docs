@@ -1,3 +1,9 @@
+## 0.5.0 (2025-09-01)
+
+### Feat
+
+- Removido poethepoet, adicionado invoke
+
 ## 0.4.0 (2025-08-29)
 
 ### Feat
