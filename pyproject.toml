@@ -23,8 +23,8 @@ optional = true
 black = "^25.1.0"
 commitizen = "^4.8.3"
 flake8 = "^7.3.0"
+invoke = "^2.2.0"
 isort = "^6.0.1"
-poethepoet = "^0.37.0"
 
 [tool.black]
 line-length = 100
@@ -60,11 +60,6 @@ version_provider = "pep621"
 update_changelog_on_bump = true
 major_version_zero = true
 version_files = ["pyproject.toml:project.version"]
-
-[tool.poe.tasks]
-clean = "make clean"
-build = "sphinx-autobuild ./docs ./build --host 0.0.0.0 --port 9000"
-docs = ["clean", "build"]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
