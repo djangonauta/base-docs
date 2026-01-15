@@ -1,3 +1,9 @@
+## 0.6.0 (2026-01-15)
+
+### Feat
+
+- Adicionado suporte para Python 3.14
+
 ## 0.5.0 (2025-09-01)
 
 ### Feat
