@@ -8,7 +8,7 @@
 import tomllib
 
 project = "docs-base"
-copyright = "2025, Igor Carvalho"
+copyright = "2026, Igor Carvalho"
 author = "Igor Carvalho"
 with open("../pyproject.toml", "rb") as f:
     config = tomllib.load(f)

@@ -3,32 +3,35 @@ name = "base-docs"
 version = "0.5.0"
 description = "Projeto base para documentações"
 authors = [
-    {name = "Igor Carvalho", email = "igbrch@gmail.com"}
+    {name = "Igor Carvalho",email = "igbrch@gmail.com"}
 ]
+license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.14,<3.15"
 dependencies = [
-    "sphinx (>=8.2.3,<9.0.0)",
+    "sphinx (>=9.1.0,<10.0.0)",
     "sphinx-autobuild (>=2025.8.25,<2026.0.0)",
-    "sphinx-rtd-theme (>=3.0.2,<4.0.0)",
+    "sphinx-rtd-theme (>=3.1.0,<4.0.0)"
 ]
 
 [tool.poetry]
 package-mode = false
 
+[dependency-groups]
+dev = [
+    "black (>=25.12.0,<26.0.0)",
+    "commitizen (>=4.11.6,<5.0.0)",
+    "flake8-pyproject (>=1.2.4,<2.0.0)",
+    "invoke (>=2.2.1,<3.0.0)",
+    "isort (>=7.0.0,<8.0.0)"
+]
+
 [tool.poetry.group.dev]
 optional = true
 
-[tool.poetry.group.dev.dependencies]
-black = "^25.1.0"
-commitizen = "^4.8.3"
-flake8 = "^7.3.0"
-invoke = "^2.2.0"
-isort = "^6.0.1"
-
 [tool.black]
 line-length = 100
-target-version = ['py313']
+target-version = ['py314']
 include = '\.pyi?$'
 extend-exclude = '''
 /(

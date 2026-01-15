@@ -89,15 +89,8 @@ base-docs on  main [!?] is 📦 v0.3.2 via 🐍 v3.13.7 (base-docs-py3.13)
 ❯
 ```
 
-Com o ambiente virtual ativado, execute `poe docs` para limpar o diretório `build` construir a documentação
+Com o ambiente virtual ativado, execute `inv docs` para limpar o diretório `build` construir a documentação
 usando `sphinx-autobuild`.
-
-`poe` não aparenta funcionar no Windows. Nesse caso use os comandos a seguir:
-
-```bash
-make clean
-sphinx-autobuild ./docs ./build --host 0.0.0.0 --port 9000
-```
 
 ## Reiniciar o repositório
 
